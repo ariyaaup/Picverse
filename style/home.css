@@ -8,7 +8,7 @@ body {
   color: #fff;
 }
 
-/* Navbar Styles */
+/*===================== Navbar Styles ====================*/
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -24,6 +24,7 @@ body {
 .navBar .rightAlign {
   display: flex;
   gap: 20px;
+  margin-right: 3rem;
 }
 
 .navBar .rightAlign a {
@@ -37,12 +38,47 @@ body {
   color: #8a2be2;
 }
 
-/* Hero Section Carousel */
+/* ini ilang kl gede layarnya  */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/*============ Hero Section & Carousel ==============*/
 .hero {
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 100vh;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.hero-content h1 {
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "David Libre", serif;
+  font-weight: bold;
+  margin: 0;
 }
 
 .carousel-container {
@@ -100,7 +136,7 @@ button:hover {
   background-color: #7a1d9c;
 }
 
-/* Gallery Section */
+/*=================== Gallery Section ======================= */
 .gallery {
   text-align: center;
   font-family: "David Libre";
@@ -128,7 +164,7 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
-/* Hover Gambar Gallery*/
+/* ============== Hover Gambar Gallery =================*/
 .gallery-item:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
@@ -138,7 +174,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Community Section */
+/* =============== Community Section =============== */
 .community {
   background-color: #000;
   padding: 50px 50px;
@@ -224,7 +260,7 @@ button:hover {
   background-color: #7a1d9c;
 }
 
-/* Footer */
+/* =============== Footer ================*/
 .footer-parent {
   background-color: #111;
   padding: 2rem;
@@ -285,7 +321,7 @@ button:hover {
   font-size: 14px;
 }
 
-/* Responsive Design for Footer */
+/* ================ Responsive Design ===============*/
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -341,8 +377,61 @@ button:hover {
   }
 }
 
-/* @media (min-width: 900px) {
+/* hero responsive  */
+@media (max-width: 920px) {
   .hero {
-    height: 70vh; 
+    height: 70%;
   }
-} */
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+    bottom: 70%;
+    left: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1rem;
+    bottom: 70%;
+    left: 50%;
+  }
+}
+
+/* hamburger menu */
+@media (max-width: 768px) {
+  .navBar .rightAlign {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navBar .rightAlign a {
+    padding: 10px;
+    width: 100%;
+    border-top: 1px solid purple;
+    border-bottom: 1px, solid purple;
+  }
+
+  .navBar .rightAlign a:hover {
+    background-color: #7a1d9c;
+  }
+
+  .rightAlign.active {
+    display: flex;
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

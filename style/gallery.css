@@ -1,0 +1,79 @@
+/*============== Categories Section lah ============== */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: white;
+  background-color: transparent;
+  color: white;
+  border: 1px solid;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.category-btn:hover {
+  background-color: #7a1d9c;
+}
+
+/* ================ Gallery Section ============== */
+
+.gallery-page {
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(4, minmax(250px, 1fr)); */
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-page-item {
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.gallery-page-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-page-item:hover {
+  transform: scale(1.05); /* Menambahkan efek zoom pada hover */
+}
+
+/* ================ responsive nya ============ */
+
+@media (max-width: 920px) {
+  .gallery-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-page {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 535px) {
+  .categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+  }
+  .category-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
