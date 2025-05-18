@@ -1,0 +1,142 @@
+/* =========== Visi misi css ============= */
+.visi-misi {
+  display: flex;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.visi-misi-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.visi-misi-content h1 {
+  font-size: 2.5rem;
+  font-family: "David Libre", Bold;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.visi-misi-text {
+  display: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.visi-misi-text p {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.visi-misi-text ol {
+  margin-left: 20px;
+  list-style-type: decimal;
+}
+
+/* ============= Community Page ================  */
+
+.community-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  justify-content: space-between;
+  padding: 50px;
+  gap: 20px;
+}
+
+.community-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.post {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #fff;
+}
+
+.post-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post-actions {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.like-btn:hover {
+  background-color: #7a1d9c;
+  color: white;
+}
+
+/* ============= Responsive About us ========== */
+@media (max-width: 768px) {
+  .visi-misi-content h1 {
+    font-size: 2rem;
+  }
+
+  .visi-misi-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .community-posts {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+@media (max-width: 680px) {
+  .community-posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* beberpaa seperti hero ada di home css  */

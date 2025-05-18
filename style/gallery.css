@@ -49,7 +49,7 @@
 }
 
 .gallery-page-item:hover {
-  transform: scale(1.05); /* Menambahkan efek zoom pada hover */
+  transform: scale(1.05);
 }
 
 /* ================ responsive nya ============ */
