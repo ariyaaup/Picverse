@@ -339,9 +339,10 @@ button:hover {
 
 .footer-child {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-parent img {
@@ -391,30 +392,49 @@ button:hover {
 }
 
 /* ================ Responsive Design ===============*/
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   .footer-content {
+    font-size: 12px;
     flex-direction: column;
     align-items: center;
     margin-left: 0;
+    text-align: center;
   }
 
   .footer-config {
+    font-size: 12px;
     margin-right: 0;
     margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .footer-child {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-parent img {
+    font-size: 12px;
     margin-bottom: 1rem;
+    width: 80%;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .footer-hr {
     margin-top: 1rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .copyright-info {
     font-size: 12px;
     text-align: center;
     margin-top: 1.5rem;
+    width: 100%;
   }
 }
 
