@@ -7,7 +7,7 @@
   justify-content: center;
   padding: 40px;
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .visi-misi-content {
@@ -110,7 +110,9 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .like-btn:hover {

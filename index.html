@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,11 +6,6 @@
     <title>Picverse - Home</title>
     <!-- link css -->
     <link rel="stylesheet" href="style/home.css" />
-    <!-- link font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <!-- Navbar -->
@@ -37,17 +32,22 @@
     <!-- akhir navbar  -->
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero-content">
-        <div class="carousel-slide">
-          <div class="carousel-item">
-            <img src="assets/Moon3.jpg" alt="Moon Art 1" />
-            <p class="carousel-text">
-              Explore the Moon’s Beauty Through AI – Art,<br />
-              Facts, and Mysteries Unveiled!
-            </p>
-            <button onclick="visitGallery()">Visit our gallery</button>
-          </div>
+    <section class="hero-container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <h1>
+            Explore the Moon’s Beauty Through AI – Art, Facts, and Mysteries
+            Unveiled!
+          </h1>
+          <button>Visit out Gallery</button>
+          <img id="wrap-1" src="assets/Moon1.jpg" alt="Moon Hero Main" />
+          <img id="wrap-2" src="assets/Moon2.jpg" alt="Moon Hero Main" />
+          <img id="wrap-3" src="assets/Moon1.jpg" alt="Moon Hero Main" />
+        </div>
+        <div class="slider-nav">
+          <a href="#wrap-1"></a>
+          <a href="#wrap-2"></a>
+          <a href="#wrap-3"></a>
         </div>
       </div>
     </section>
@@ -160,7 +160,7 @@
       </p>
     </div>
     <!-- akhir footer  -->
-    <script src="script/carousel.js"></script>
+    <script src="script/hero.js"></script>
     <script src="script/script.js"></script>
   </body>
 </html>

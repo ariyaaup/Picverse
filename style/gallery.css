@@ -52,6 +52,72 @@
   transform: scale(1.05);
 }
 
+/* ============ Create and Share Page ==================== */
+.upload {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+.upload p {
+  font-family: "David Libre", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.upload-content img {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.upload-attribute {
+  margin-bottom: 100px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input {
+  background-color: #777;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 16px;
+  color: white;
+  font-family: "David Libre", serif;
+}
+
+.form-group label {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.form-group input {
+  background-color: #777;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+}
+
+.form-group input::placeholder {
+  color: #ddd;
+}
+
 /* ================ responsive nya ============ */
 
 @media (max-width: 920px) {

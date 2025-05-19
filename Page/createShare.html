@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,12 +6,8 @@
     <title>Picverse - About us</title>
     <!-- link css -->
     <link rel="stylesheet" href="../style/home.css" />
-    <!-- <link rel="stylesheet" href="/style/gallery.css" /> -->
-    <!-- link font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="../style/aboutCom.css" />
+    <link rel="stylesheet" href="../style/gallery.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -29,6 +25,7 @@
       <div class="hamburger" id="hamburger">☰</div>
       <!-- ---------  -->
       <div class="rightAlign" id="nav-menu">
+        <a href="../index.html">Home</a>
         <a href="gallery.html">Gallery</a>
         <a href="community.html">Community</a>
         <a href="createShare.html">Create & Share</a>
@@ -44,6 +41,100 @@
       </div>
     </section>
     <!-- akhir hero  -->
+
+    <!-- noted section  -->
+    <section class="visi-misi">
+      <div class="visi-misi-content">
+        <h1>Create and Share Your Moon Art</h1>
+        <div class="visi-misi-text">
+          <p>
+            Explore your creativity and share your unique AI-generated moon art
+            with the community. Whether you're a digital artist, photographer,
+            or an enthusiast of the celestial world, this is the space for you
+            to showcase your work.
+          </p>
+          <ol>
+            <h3>
+              Create Stunning Art: Use AI tools to generate breathtaking
+              moon-themed artwork.
+            </h3>
+            <h3>
+              Share with Others: Upload your creations and let the community
+              appreciate your vision.
+            </h3>
+            <h3>
+              Get Inspired: Discover art from other moon enthusiasts and draw
+              inspiration from their creations.
+            </h3>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- akhir noted section  -->
+
+    <!-- upload section  -->
+    <section class="upload">
+      <div class="upload-content">
+        <input type="file" id="fileInput" style="display: none" />
+        <img
+          src="../assets/UploadYT.png"
+          alt="Upload guys"
+          onclick="document.getElementById('fileInput').click()"
+          style="cursor: pointer"
+        />
+        <p>Upload your creations</p>
+      </div>
+    </section>
+    <!-- akhir upload section  -->
+
+    <!-- kelengkapan upload  -->
+    <section class="upload-attribute">
+      <div class="attribute-content">
+        <form class="upload-form">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter your artwork title"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              id="description"
+              name="description"
+              placeholder="Describe your artwork"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input
+              type="text"
+              id="category"
+              name="category"
+              placeholder="e.g. AI, Photography, Digital"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="tags">Tags</label>
+            <input
+              type="text"
+              id="tags"
+              name="tags"
+              placeholder="e.g. moon, stars, night"
+            />
+          </div>
+          <button type="submit" class="upload-btn">Upload</button>
+        </form>
+      </div>
+    </section>
+    <!-- akhir form atrribut upload  -->
 
     <!-- Footer -->
     <div class="footer-parent">
@@ -97,5 +188,16 @@
     <!-- akhir footer  -->
 
     <script src="../script/script.js"></script>
+    <!-- script buat upload, ga ke databse, -->
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function () {
+          const file = this.files[0];
+          if (file) {
+            document.getElementById("fileName").textContent = file.name;
+          }
+        });
+    </script>
   </body>
 </html>
