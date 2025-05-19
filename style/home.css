@@ -18,19 +18,19 @@ body {
 }
 
 .navBar .leftAlign img {
-  width: 200px;
+  width: 180px;
 }
 
 .navBar .rightAlign {
   display: flex;
   gap: 20px;
-  margin-right: 3rem;
+  margin-right: 0;
 }
 
 .navBar .rightAlign a {
   color: #fff;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -41,9 +41,34 @@ body {
 /* ini ilang kl gede layarnya  */
 .hamburger {
   display: none;
-  font-size: 30px;
+  font-size: 2rem;
   color: white;
-  margin-right: 15px;
+  margin-right: 25px;
+  cursor: pointer;
+  z-index: 101;
+  transition: transform 0.5s ease;
+}
+
+.hamburger.active {
+  transform: rotate(360deg);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: 000;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*============ Hero Section & slider ==============*/
@@ -444,7 +469,7 @@ button:hover {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 0;
     background-color: #000;
     width: 100%;
@@ -469,7 +494,7 @@ button:hover {
     display: flex;
     width: 60%;
     height: auto;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
   .hamburger {
